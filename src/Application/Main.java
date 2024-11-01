@@ -35,17 +35,23 @@ public class Main {
                         System.out.println(e.getMessage());
                     }
                     break;
+                    //Essa função vai pegar o dado que o usuário inserrir, vai pecorrer a lista até a posição indicada,
+                    //caso a posição seja invalida o código irá gerar um erro
+                    //e caso já tenha um dado no respectivo nó, esse dado vai ir para a posição n + 1
 
                 case 2:
                     System.out.print("Digite o valor a ser removido: ");
                     int valueToRemove = scanner.nextInt();
                     linkedList.removeElement(valueToRemove);
                     break;
+                    //Essa função irá remover o elemento indicado pelo scanner
 
                 case 3:
                     linkedList.reverseList();
                     System.out.println("Lista invertida com sucesso.");
                     break;
+                    //Essa função irá inverter a lista ajustando os ponteiros de cada nó para que eles apontem para o nó 
+                    //anterior e o primeiro nó será considerado o último
 
                 case 4:
                     Node middleNode = linkedList.getMiddleNode();
@@ -55,16 +61,24 @@ public class Main {
                         System.out.println("A lista está vazia.");
                     }
                     break;
+                    //Essa função irá ultilizar dois ponteiros: o ponteiro lento(que irá se mover 1 posição por vez) e o 
+                    //ponteiro rápido(que irá se mover 2 posições por vez), esse processo será repetido até que o ponteiro
+                    //rápido chegue ao final da lista, que irá resultar no seguinte:
+                    //quando o ponteiro rápido chegar no final da lista, o ponteiro lento estará exatamente no meio da lista,
+                    //assim essa função irá retornar o ponteiro lento que irá ser o respectivo nó requisitado
 
                 case 5:
                     linkedList.removeDuplicates();
                     System.out.println("Duplicatas removidas com sucesso.");
                     break;
+                    //Essa função vai inserir os elementos 1 por 1 dentro do hash e vali comparando cada valor com o próximo,
+                    //caso tenha algum número repetido, ele será excluido
 
                 case 6:
                     System.out.print("Lista atual: ");
                     linkedList.printList();
                     break;
+                    //Essa função sempre que a quantidade de elementos for maior do que 0, ela vai pegar nó por nó e vai imprimindo no console
 
                 case 0:
                     System.out.println("Programa encerrado");
